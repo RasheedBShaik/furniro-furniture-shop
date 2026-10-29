@@ -14,10 +14,12 @@ import ProductPage from "./components/Product";
 import { CartProvider } from "./components/Context";
 import React from "react";
 import CheckOut from "./pages/CheckOut";
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   return (
     <React.StrictMode>
+      <Analytics/>
       <CartProvider>
         <BrowserRouter>
           <div className="min-h-screen bg-white italic">
@@ -49,6 +51,7 @@ function App() {
         </BrowserRouter>
       </CartProvider>
     </React.StrictMode>
+    
   );
 }
 
